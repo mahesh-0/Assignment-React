@@ -26,7 +26,7 @@ This React-based project simulates a support dashboard with interactive features
 
 - **AI Integration**:
   - When selecting text in the chat, a **Toolbar** appears with an **AI button**.
-  - Clicking the **AI** button reveals intelligent actions or suggestions (e.g., summarization, rewriting, or analysis).
+  - Clicking the **AI** button reveals intelligent actions or suggestions.
 
 ---
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import type React from "react";
 
 import { useState, useEffect, useRef } from "react";
@@ -84,7 +83,7 @@ const aiResponseText = [
 const refundSources = [
   {
     id: 1,
-    type: "article",
+    type: "article" as const,
     title: "Getting a refund",
     author: "Amy Adams",
     time: "1d ago",
@@ -93,7 +92,7 @@ const refundSources = [
   },
   {
     id: 2,
-    type: "conversation",
+    type: "conversation" as const,
     title: "Refund for an order placed by mistake",
     author: "",
     time: "",
@@ -102,7 +101,7 @@ const refundSources = [
   },
   {
     id: 3,
-    type: "conversation",
+    type: "conversation" as const,
     title: "Refund for an unwanted gift",
     author: "Theresa Eds",
     time: "3d ago",
@@ -151,8 +150,8 @@ export function Dashboard() {
   const [displayedText, setDisplayedText] = useState<string[]>([]);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
-  const [showSources, setShowSources] = useState(false);
-  const [sourcesFound, setSourcesFound] = useState(false);
+  const [, setShowSources] = useState(false);
+  const [, setSourcesFound] = useState(false);
   const [showInboxMobile, setShowInboxMobile] = useState(false);
   const [showAICopilotMobile, setShowAICopilotMobile] = useState(false);
 
@@ -161,7 +160,7 @@ export function Dashboard() {
   const [composerText, setComposerText] = useState<string>("");
   const [showFormatToolbar, setShowFormatToolbar] = useState(false);
   const [showAIOptions, setShowAIOptions] = useState(false);
-  const [toolbarPosition, setToolbarPosition] = useState({ top: 0, left: 0 });
+  const [, setToolbarPosition] = useState({ top: 0, left: 0 });
   const [selectedText, setSelectedText] = useState({
     text: "",
     start: 0,
